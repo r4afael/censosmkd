@@ -1,0 +1,26 @@
+RewriteOptions inherit
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^censosmkd\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.censosmkd\.com$
+RewriteRule ^/?$ "https\:\/\/censosmkd\.com\/inicio\.php" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^materiales\.censosmkd\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.materiales\.censosmkd\.com$
+RewriteRule ^/?$ "http\:\/\/censosmkd\.com\/redireccionamiento\.html" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^whitespot\.censosmkd\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.whitespot\.censosmkd\.com$
+RewriteRule ^/?$ "http\:\/\/censosmkd\.com\/mkd\/clean\/one\.php" [R=301,L]
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+RewriteCond %{HTTP_HOST} ^casasfifi\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.casasfifi\.com$
+RewriteRule ^/?$ "https\:\/\/casasfifi\.store\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^faprueba\.censosmkd\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.faprueba\.censosmkd\.com$
+RewriteRule ^faprueba$ "https\:\/\/faprueba\.censosmkd\.com\/faprueba\/index\.php" [R=301,L]
+
